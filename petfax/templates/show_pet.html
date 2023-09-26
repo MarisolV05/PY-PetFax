@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Pets</title>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Come join our family</h1>
+    {% for pet in pet %}
+    <h2>{{ pet.pet_name }}</h2>
+    <img src="{{ pet.pet_photo }}" alt="Photo of pet"/>
+    <div class="pet-fact">{{ pet.pet_fact }}</div>
+
+{% endfor %}
+<a href="/facts/submit">Want to add a fact?</a>   <br>
+<a href="/pets"> Go Back</a>
+    
+</body>
+</html>
+
